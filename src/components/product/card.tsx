@@ -24,6 +24,7 @@ export const ProductCard: FC<ProductCardProps> = ({
   getCartItemDetails,
 }): ReactElement => {
   const { id, price, name, colour, img } = product;
+  const cartItem = getCartItemDetails(id)
   return (
     <section>
       <Row className="py-3">
@@ -44,19 +45,20 @@ export const ProductCard: FC<ProductCardProps> = ({
                 <div className="w-25 d-flex align-items-center justify-content-center flex-column">
                   {existsInCart(id) ? (
                     <div className="counter w-75 d-flex justify-content-between">
-                      <span
+                      <button
                         className="pr-2 cursor-pointer user-select-none"
                         onClick={() => decrementProduct(id)}
+                        disabled={cartItem?.quantity === 1}
                       >
                         -
-                      </span>
-                      {getCartItemDetails(id)?.quantity}
-                      <span
+                      </button>
+                      {cartItem?.quantity}
+                      <button
                         className="pl-2 cursor-pointer user-select-none"
                         onClick={() => incrementProduct(id)}
                       >
                         +
-                      </span>
+                      </button>
                     </div>
                   ) : null}
                   {!existsInCart(id) ? (

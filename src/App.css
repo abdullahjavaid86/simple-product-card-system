@@ -35,3 +35,12 @@ img {
   border-top: 3px solid #000;
   font-weight: 600;
 }
+
+button {
+  background: transparent;
+  border: solid #000 1px;
+}
+
+button:disabled {
+  cursor: not-allowed !important;
+}

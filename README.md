@@ -1,6 +1,11 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Note:
+
+You will see in the network tab, that useEffect has been called two times
+This will only be in the development mode and if we use StrictMode
+This is the intended behaviour in `React 18`
+[React 18 useEffect behaviour in StrictMode development](https://medium.com/geekculture/the-tricky-behavior-of-useeffect-hook-in-react-18-282ef4fb570a)
 
 ## Available Scripts
 

@@ -1,17 +1,17 @@
-import { Col, Row } from "react-bootstrap";
+import {Col, Row} from "react-bootstrap";
 
-import { FC } from "react";
+import {FC} from "react";
 
 type CartTotalProps = {
-  cartTotal: number;
+    cartTotal: number | string;
 };
 
-export const CartTotal: FC<CartTotalProps> = ({ cartTotal }) => {
-  return (
-    <Row>
-      <Col className="text-end total">
-        <span>£{cartTotal}</span>{" "}
-      </Col>
-    </Row>
-  );
+export const CartTotal: FC<CartTotalProps> = ({cartTotal}) => {
+    return (
+        <Row>
+            <Col className="text-end total">
+                <span>£{cartTotal}</span>{" "}
+            </Col>
+        </Row>
+    );
 };

@@ -79,4 +79,4 @@ export const checkIfProductExistsInCart = (
 ) => !!data.find((item) => item.product_id === product_id);
 
 export const cartTotal = (data: CartItems) =>
-  data.reduce((a, b) => a + b.price, 0);
+  data.reduce((a, b) => a + b.price, 0).toFixed(2);
