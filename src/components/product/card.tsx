@@ -24,7 +24,7 @@ export const ProductCard: FC<ProductCardProps> = ({
   getCartItemDetails,
 }): ReactElement => {
   const { id, price, name, colour, img } = product;
-  const cartItem = getCartItemDetails(id)
+  const cartItem = getCartItemDetails(id);
   return (
     <section>
       <Row className="py-3">
@@ -83,28 +83,6 @@ export const ProductCard: FC<ProductCardProps> = ({
           </Card>
         </Col>
       </Row>
-      {/* <div className="continer">
-        <div className="row">
-          <div className="col-12">
-            <div className="card">
-              <div className="row">
-                <div className="col-md-4">
-                  <img src="" alt="" />
-                </div>
-                <div className="col-md-8 d-flex justify-content-between">
-                  <div className="card-details">
-                    <h2>Card HEading</h2>
-                    <p className="price">
-                      Price <span>1300</span>
-                    </p>
-                  </div>
-                  <div className="counter"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
     </section>
   );
 };
